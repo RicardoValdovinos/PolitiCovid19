@@ -1,8 +1,8 @@
 # PolitiCovid19
 
-## Description
+PolitiCovid19 is a small data visualization application that compares the infection rates of various states with their political party affiliation.
 
-PolotiCovid19 is a small data visualization application that compares the infection rates of a state with its political party affiliation.
+## Description
 
 It takes CSV datasets for Covid19 gathered from https://covidtracking.com/data/download, https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days, and a csv dataset for the 2020 election results that was manually created by referencing https://www.270towin.com/.
 
