@@ -164,7 +164,7 @@ def main():
         pdf.savefig(dem_line_figure)
         rep_line_figure = line_plots[1].get_figure()
         pdf.savefig(rep_line_figure)
-        bar_figure = build_politicovid_bar_plot(covid_case_rate_df, political_df).get_figure()  # FIXME: I look weird
+        bar_figure = build_politicovid_bar_plot(covid_case_rate_df, political_df).get_figure()
         pdf.savefig(bar_figure)
         pie_figure = build_politicovid_pie_plot(covid_total_cases_df, political_df).get_figure()
         pdf.savefig(pie_figure)

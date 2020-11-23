@@ -20,6 +20,7 @@ def display_line_plot(df_dict, color_map, title, x_label, y_label):
     line_plot.set_title(title)
     line_plot.set_xlabel(x_label)
     line_plot.set_ylabel(y_label)
+    line_plot.set_ylim(0, 80000)
     return line_plot
 
 
@@ -33,6 +34,7 @@ def display_bar_plot(bar_plot_column, colors, x_tick_labels, title, x_label, y_l
     bar_plot.set_title(title)
     bar_plot.set_xlabel(x_label)
     bar_plot.set_ylabel(y_label)
+    bar_plot.set_ylim(0, 10000)
     bar_plot.legend(handles=handles, loc=2)
     return bar_plot
 
