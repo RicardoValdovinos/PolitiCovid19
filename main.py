@@ -156,13 +156,15 @@ def main():
     covid_total_cases_df = data_shaper.convert_column_to_numeric(covid_total_cases_df, 'total cases')
     political_df = pd.read_csv('datasets/2020_Election_Results.csv').sort_values('state')
     if len(sys.argv) < 2:
+        # TODO: figure out why output is completely wrong if figures are put in a list and saved to pdf through
+        #  iterating list
         pdf = matplotlib.backends.backend_pdf.PdfPages("figures.pdf")
         line_plots = build_politicovid_line_plot(get_covid_time_data(), political_df)
         dem_line_figure = line_plots[0].get_figure()
         pdf.savefig(dem_line_figure)
         rep_line_figure = line_plots[1].get_figure()
         pdf.savefig(rep_line_figure)
-        bar_figure = build_politicovid_bar_plot(covid_case_rate_df, political_df).get_figure()
+        bar_figure = build_politicovid_bar_plot(covid_case_rate_df, political_df).get_figure()  # FIXME: I look weird
         pdf.savefig(bar_figure)
         pie_figure = build_politicovid_pie_plot(covid_total_cases_df, political_df).get_figure()
         pdf.savefig(pie_figure)
